@@ -1,0 +1,591 @@
+    /*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 Oct 2019, 9:40:04 PM
+    Author     : Pak Shao Kai
+*/
+
+*{
+    font-family: 'Oxygen', sans-serif;
+}
+body{
+    padding-bottom: 300px;
+}
+html {
+     position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+.icon_img {
+    padding-right: 10px; 
+    width: 50px
+}
+
+.topsection{
+    margin-top: 20px;
+}
+/********************************************************* CAROUSEL *********************************************************/
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.carousel-caption {
+
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.35); /* Black background with 0.5 opacity */
+}
+
+@media (max-width:768px) {
+    .carousel-caption h3 {
+        font-size: 2rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/********************************************************* Card Items *********************************************************/
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+/********************************************************* NAV Bar *********************************************************/
+/* change the background color of navbar*/
+.navbar{
+    background-color: black;
+    transition: background-color 1s ease 0s;
+}
+.navbartrans{
+    background-color: rgba(0,0,0,0.35);
+    transition: background-color 1s ease 0s;
+}
+/* change the brand and text color */
+.navbar-light .navbar-brand,
+.navbar-light .navbar-text,
+.navbar .navbar-brand{
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    margin: 0px;
+    text-shadow: #0BC0FF 0px 0px 5px, #0BC0FF 0px 0px 10px, #0BC0FF 0px 0px 15px, #0BC0FF 0px 0px 20px, #0BC0FF 0px 0px 30px, #0BC0FF 0px 0px 40px, #0BC0FF 0px 0px 50px, #0BC0FF 0px 0px 75px;
+    color: #FFFFFF;
+
+
+}
+/* change the link color */
+.navbar-light .navbar-nav .nav-link {
+   
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    color: white;
+    
+    
+}
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover {
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    color: grey;
+
+}
+/*nav bar selected item/active item*/
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show > .nav-link {
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    color: darkgrey;
+    text-shadow: 0px 0px 10px #898989;
+}
+.navbar-light .navbar-brand:focus, 
+.navbar-light .navbar-brand:hover {
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    color: white;
+
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+/* trasition */
+.navbar.solid {
+    background-color: black;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    .navbar-brand {
+        color: #C57ED3;
+        transition: color 1s ease 0s;
+    }
+    .navbar-nav {
+        > li {
+            > a {
+                color: #C57ED3;
+                transition: color 1s ease 0s;
+            }
+        }
+    }
+}
+.navbar-toggler-icon-style{
+    color:#fff; 
+    font-size:28px;
+}
+
+/********************************************************* FOOTER *********************************************************/
+section {
+    padding-top:55px;
+}
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    background: black !important;
+}
+#footer h5{
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+    padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size:25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+    font-size:30px;
+    margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+    color:#ffffff;
+}
+#footer ul.social li a:hover{
+    color:#eeeeee;
+}
+#footer ul.quick-links li{
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+    padding: 3px 0;
+    margin-left:5px;
+    font-weight:700;
+}
+#footer ul.quick-links li a i{
+    margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+@media (max-width:767px){
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+}
+
+/*************************************************** CART*****************************************************/
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+.category_block li:hover {
+    background-color: #007bff;
+}
+.category_block li:hover a {
+    color: #ffffff;
+}
+.category_block li a {
+    color: #343a40;
+}
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+.product_rassurance .list-inline {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product_rassurance .list-inline li:hover {
+    color: #343a40;
+}
+.reviews_product .fa-star {
+    color: gold;
+}
+
+.cart-img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/********************************************************* EVENTS *********************************************************/
+
+.form-control-borderless {
+    border: none;
+}
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn-success {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: lightslategray;
+    border-color: lightslategray;
+}
+.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show > .btn-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(200,200,200,0.5);
+}
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle {
+    color: black;
+    background-color: lightslategray;
+    border-color: lightslategray;
+}
+.containerEvent {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+/******************************************* LOGIN FORM*********************************************************/
+.inputfield{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+#loginModal p{
+    margin-top: 10px;
+    color: #999;
+}
+#mismatchpassword{
+    float: left;
+    color:red; 
+    margin-top:-30px
+}   
+
+
+#emailmsg{
+    float: left;
+    color:green; 
+    margin-top:-30px
+}
+
+#signbtn, #resetbtn, #loginbtn{
+    width: 100%;
+    margin-top: 10px; 
+}
+
+
+/***************************************************FAQ & ABOUT US*********************************************/
+.team-profile .team_image_wrapper {
+    transform: none;
+    transition: transform 0.3s;
+    height: 134px;
+    width: 134px;
+    margin: 0 auto 10px auto;
+    position: relative;
+}
+.team-profile .team_image_wrapper:hover {
+    transform: rotateZ(360deg);
+}
+.team-profile .team_image_wrapper:hover .img-primary {
+    opacity: 0;
+}
+.team-profile .team_image_wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+p .large-text{
+    text-align: justify;
+}
+
+.feature-highlights img{
+    height: 80px;
+    width: auto;
+    margin: 0 auto 22px auto;
+}
+
+.feature-highlights{text-align: center;}
+
+.feature-highlights h2{
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+section.team{
+    padding-top: 41px;
+    padding-bottom: 58px;
+}
+.team img{
+    height: 134px;
+}
+
+.centered{
+    margin: 0 auto;
+    float: none;
+}
+
+.team-profile {
+    min-height: 330px;
+}
+
+.faqsectionmarginbottom{
+    margin-bottom: 30px;
+}
+
+.contactus2img {
+    display:block; 
+    width:70%; 
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.faqform input, textarea{
+        margin-top: 15px;
+        margin-bottom: 15px;
+}
+
+.faqform button{
+    margin-top: 40px;
+     margin-bottom: 30px;
+}
+/***************************************************INVENTORY*********************************************/
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+
+.table-title .add-new i {
+    margin-right: 4px;
+}
+#buybutton{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+.containerListView {
+    padding-top: 20px;
+}
+
+.eventsdetailsimage{
+    max-width: 100%;
+}
+
+.eventsdetailstext{
+    text-align: justify;
+}
+
+.fa-pencil{
+    color: darkslategray;
+}
+
+.fa-times{
+    color: red;
+}
+
+.table thead{
+    overflow: hidden;
+    max-width: 50px;
+    word-wrap: break-word;
+}
+
+.addnew{
+    text-align: right;
+}
+.listitem td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+
+ tr:nth-child(even){
+    background-color: #f2f2f2; 
+}
+/***************************************************Event Details*********************************************/
+#eventdetail{
+    border:3px; 
+    border-style:solid; 
+    border-color:#5a6268; 
+    padding: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*********************************************************Account *********************************************************/
+.border-class
+{
+  border:thin black solid;
+  margin:20px;
+  padding:20px;
+}
+
+#chgpwdmismatchpassword{ 
+    color:red; 
+    margin-top:50px
+}
+
+
+
+/*********************************************************DropDown *********************************************************/
+
+.dropdown:hover .dropdown-menu {
+    display: inline;
+    background: black;
+    text-align: center;
+}
+
+.dropdown-menu a{ 
+    color: #FFFFFF;
+}
+/*.dropdown .dropdown-toggle:active {
+    prevent dropdown to stay when on click
+    pointer-events: none;
+}*/
+
+
+
+/******************Events****************/
+.containerEvent .noresults{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/*cart*/
+
+.cartempty {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+/******************Event Details****************/
+#eventdetail{
+    border:3px; 
+    border-style:solid; 
+    border-color:#5a6268; 
+    padding: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#eventdetail .row .col h5{
+    font-size: 17px;
+    padding-bottom: 50px;
+}
+
+/******************payment page****************/
+
+.paymenttitle h1{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.paymentform .col-md-6{
+    padding-bottom: 10px;
+    float:none;
+    margin:auto;
+}
+
